@@ -1,6 +1,6 @@
 body{
     margin-top:20px;
-    background:#f3f3f3;
+    background-image: url('../assets/bliss.jpg');
 }
 
 /* Made it so that minimizing it wont mess up the look of the site */
@@ -24,6 +24,7 @@ body{
     padding: 15px; /* Reduce padding */
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+    background: #f3f3f3;
 }
 
 .card .card-header {
@@ -31,8 +32,8 @@ body{
     border-bottom: none;
     padding: 25px;
     text-align: center;
-    background: linear-gradient(45deg, #D6294F, #FA7E1E);
-    box-shadow: 0 0 0 5px #D6294F;
+    background: linear-gradient(45deg, #0072ff, #00c6ff);
+    box-shadow: 0 0 0 5px #73b4ff;
     margin-bottom: 15px;
     border-radius: 30px; /* Smoother edge */
     align-items: center; /* Center vertically */
@@ -161,7 +162,7 @@ body{
 
 /*Added gradiaent color to look like my org <3*/
 .bg-c-jpcs {
-    background: linear-gradient(45deg, #D6294F, #FA7E1E);
+    background: linear-gradient(45deg, #0072ff, #00c6ff);
 }
 
 .bg-c-pink {
