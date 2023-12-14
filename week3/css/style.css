@@ -1,0 +1,13 @@
+body {
+    padding: 20px; /* Add your desired padding value */
+ }
+
+ .d {
+     padding-top: 15px;
+     padding-bottom: 15px;
+ }
+
+ li {
+     padding-top: 5px;
+     padding-bottom: 5px;
+ }
