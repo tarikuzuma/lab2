@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive 2-Column Layout</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 960px; /* Set maximum width */
+      margin: 0 auto; /* Center the container */
+      padding: 20px; /* Add padding to the container */
+      box-sizing: border-box; /* Include padding in the width */
+    }
+
+    .row {
+      display: flex; /* Use flexbox for columns */
+      flex-wrap: wrap; /* Allow wrapping on smaller screens */
+      justify-content: space-between; /* Space evenly between columns */
+      margin: 0 -10px; /* Negative margin to counteract padding */
+    }
+
+    .column {
+      flex: 0 0 48%; /* Two columns taking up 48% width each */
+      padding: 10px; /* Add padding to each column */
+      box-sizing: border-box; /* Include padding in the width */
+      background-color: #f2f2f2; /* Background color for demonstration */
+      margin-bottom: 20px; /* Add margin between rows */
+    }
+
+    @media (max-width: 767px) {
+      /* On smaller screens, make columns take up 100% width */
+      .column {
+        flex: 0 0 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="column">
+        <h2>Column 1</h2>
+        <p>Content for Column 1</p>
+      </div>
+      <div class="column">
+        <h2>Column 2</h2>
+        <p>Content for Column 2</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
