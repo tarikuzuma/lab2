@@ -1,3 +1,193 @@
+body{
+    font-family: Poppins;
+    background-color: #4f7b66;
+}
+
 .custom-navbar {
     background-color: #00d4ff;
+}
+
+
+
+.main_top {
+    padding-top: 2in; /* Adjust the value as needed */
+    padding-bottom: 1in;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+    animation: colorshift 20s infinite;
+}
+
+@keyframes colorshift {
+    10% {color: black}
+    20% {color: #003220;}
+    30% {color: #94bb8b;}
+    40% {color: #7ca876;}
+    50% {color: #bfdcae;}
+    60% {color: #94bb8b;}
+    70% {color: #abc072;}
+}
+
+/*Main Info*/
+.main_info {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1300px; /* Set maximum width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add padding to the container */
+    box-sizing: border-box; /* Include padding in the width */
+    /*background-color: #234138;*/
+    border-radius: 50px;
+  }
+  
+.main_info .left {
+    width: 100%;
+    position: relative;
+    padding-right: 10%;
+    width: fit-content;
+    height: fit-content;
+    display: inline-block; 
+    /* background-color: #f0f0f0;  Optional: Just to show the container */
+  }
+
+.image img {
+    width: 389px;
+    height: 389px;
+    border-radius: 50%; /* Set a border-radius to create a circular image */
+    object-fit: cover; /* Maintain the image's aspect ratio and cover the entire space */
+    margin-bottom: 40px; /* Add spacing aka Margin */
+}
+
+/* Spotify CSS */
+.spotify {
+    width: 400px;
+    height:auto;
+    position: relative;
+    background: #79E19C;
+    border-radius: 54px; 
+    align-items: center;
+    justify-content: center;
+}
+
+.spotify img{
+    width: 88px;
+    height: 88px;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    border-radius: 54px;
+}
+
+.spotify .texts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-left: 100px;
+    padding-bottom: 10px;
+  }
+
+.spotify .now {
+    color: white;
+    font-size: x-large;
+    margin-top: 10px;
+    padding-right: 20px
+}
+
+.spotify .title {
+    color: black;
+    font-size: x-large;
+    word-wrap: break-word;
+}
+
+.spotify .title .author{
+    color: pink;
+}
+
+.main_info .right{
+    display: flex;
+    flex-direction: column; /* Arrange items in a column */
+}
+
+.aspiring {
+    color: #79E19C; 
+    font-size: 40px;
+    font-weight: 700; 
+    word-wrap: break-word;
+}
+
+
+.main_info .about{
+    color: white;
+    font-size: 28px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.main_info .tags {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+}
+
+.main_info .attributes{
+    display: flex;
+    flex-direction: row; 
+}
+
+.attributes .tag {
+    border-radius: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 400;
+    margin-left: 10px;
+    margin-right: 10px;
+    max-width: 50%; /* Set a maximum width for tags */
+    width: auto; /* Allow tags to adjust their width */
+    padding-left: 15px; /* Add padding for better visibility */
+    padding-right: 15px;
+}
+
+.tag1 {
+    background: #B2B0FF;
+    width: 224px;
+    height: 83px;
+}
+
+.tag2 {
+    background: #FDD480;
+    width: 224px; 
+    height: 83px;
+}
+
+.tag3 {
+    background: #FAB3E6;
+    width: 224px;
+    height: 83px;
+}
+
+.row {
+  display: flex; /* Use flexbox for columns */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: space-between; /* Space evenly between columns */
+  margin: 0 -10px; /* Negative margin to counteract padding */
+}
+
+.column {
+  flex: 0 0 48%; /* Two columns taking up 48% width each */
+  padding: 10px; /* Add padding to each column */
+  box-sizing: border-box; /* Include padding in the width */
+  background-color: #f2f2f2; /* Background color for demonstration */
+  margin-bottom: 20px; /* Add margin between rows */
+}
+
+@media (max-width: 767px) {
+  /* On smaller screens, make columns take up 100% width */
+  .column {
+    flex: 0 0 100%;
+  }
 }
