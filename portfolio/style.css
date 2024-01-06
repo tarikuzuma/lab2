@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}  
+
 body{
     font-family: Poppins;
     background-color: #4f7b66;
@@ -10,13 +14,28 @@ body{
 
 
 .main_top {
-    padding-top: 2in; /* Adjust the value as needed */
     padding-bottom: 1in;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    animation: colorshift 20s infinite;
+    height: 100vh;
+}
+
+.main_top .text{
     font-size: 50px;
     font-weight: 700;
-    animation: colorshift 20s infinite;
 }
+
+.main_top .press a {
+    text-decoration: none;
+    color: white; 
+    font-size: 10px;
+    font-weight: 700;
+}
+
 
 @keyframes colorshift {
     10% {color: black}
@@ -135,6 +154,7 @@ body{
 .main_info .attributes{
     display: flex;
     flex-direction: row; 
+    justify-content: center; /* Center the items horizontally */
 }
 
 .attributes .tag {
@@ -190,4 +210,16 @@ body{
   .column {
     flex: 0 0 100%;
   }
+}
+
+/* Adjust the styles for smaller screens */
+@media (max-width: 767px) {
+    .main_info .attributes {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center the items vertically */
+    }
+    
+    .attributes .tag {
+        margin: 10px 0; /* Add vertical spacing between tags */
+    }
 }
