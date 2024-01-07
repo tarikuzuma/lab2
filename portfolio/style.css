@@ -9,8 +9,10 @@ body{
 
 section {
     display: grid;
+    /*
     place-items: center;
     align-content: center;
+    */
 }
 
 .custom-navbar {
@@ -18,7 +20,7 @@ section {
 }
 
 /* Animations */
-.hidden {
+.hidden { 
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
@@ -160,11 +162,14 @@ section {
     flex-direction: column; /* Arrange items in a column */
 }
 
-.aspiring {
-    color: #79E19C; 
+.title_main {
     font-size: 40px;
     font-weight: 700; 
     word-wrap: break-word;
+}
+
+.job_title {
+    color: #79E19C; 
 }
 
 
@@ -235,6 +240,80 @@ section {
 .tag:nth-child(3){
     transition-delay: 600ms;
 }
+
+/* Workspae Philosophy */
+
+.workspace_philosophy{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    text-justify: inter-word;
+    background: #b7f5d4;
+    margin-top: 1.5in;
+}
+
+.workspace_philosophy .container {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+
+
+.workspace_philosophy .title_main {
+    font-size: 50px;
+    font-weight: 700; 
+    word-wrap: break-word;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.text_main{
+    color: black;
+    font-size: 25px;
+}
+
+/* Circles WOAH! */
+
+.workspace_philosophy .tags {
+    margin: 3% 10% 4% 10%; /*Top right bottom left*/
+}
+
+.tags .circle {
+    width: 467px;
+    height: 133px;
+    border-radius: 54px;
+    background-color: #79e19c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 44px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.tags .first {
+    justify-content: flex-start; /* Align content to the right */
+    align-items: flex-start; /* Align content to the right */
+    margin-right: auto;
+}
+
+.tags .second {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tags .third {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Align content to the right */
+    align-items: flex-end; /* Align content to the right */
+    margin-left: auto;
+}
+
+
 
 .row {
   display: flex; /* Use flexbox for columns */
