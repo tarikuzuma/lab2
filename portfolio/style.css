@@ -9,10 +9,16 @@ body{
 
 section {
     display: grid;
-    
     place-items: center;
     align-content: center;
     
+}
+
+footer {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    color: white;
 }
 
 .custom-navbar {
@@ -139,8 +145,6 @@ section {
     position: relative;
     background: #79E19C;
     border-radius: 54px; 
-    align-items: center;
-    justify-content: center;
 }
 
 .spotify img{
@@ -374,8 +378,6 @@ section {
     font-weight:700;
 }
 
-
-
 .main_col .title {
     width: 394px;
     box-sizing: border-box; /* Include padding in the width */
@@ -385,14 +387,27 @@ section {
     font-weight:700;
 }
 
-
 .main_col .description {
     width: 394px;
     font-size:36px;
     font-weight:400;
 }
-  
 
+.col {
+    margin-top: 15px;
+}
+
+.col:first-child {
+    margin-top: 0;
+  }
+
+hr.line {
+    width: 63%;
+    border: none;
+    border-top: 1px solid black;
+    margin-top: 1in
+
+}
 
 @media (max-width: 767px) {
   /* On smaller screens, make columns take up 100% width */
