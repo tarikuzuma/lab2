@@ -340,10 +340,15 @@ section {
 
 /*Table Info Div class*/
 .table_info {
-    width: 1237px;
-    height: 1077px;
+    width: 100%; /* Set initial width to fill the container */
+    max-width: 1237px; /* Set maximum width */
+    height: auto; /* Allow height to adjust according to content */
     background: #b7f5d4;
     border-radius: 81px;
+    /* Additional styling */
+
+    /* Add margin or padding as needed */
+    /* margin: 0 auto; */
 }
 
 .row {
@@ -353,13 +358,48 @@ section {
   margin: 0 -10px; /* Negative margin to counteract padding */
 }
 
-.column {
-  flex: 0 0 48%; /* Two columns taking up 48% width each */
-  padding: 10px; /* Add padding to each column */
-  box-sizing: border-box; /* Include padding in the width */
-  background-color: #f2f2f2; /* Background color for demonstration */
-  margin-bottom: 20px; /* Add margin between rows */
+
+.main_col {
+
+    padding: 10px 50px 10px 50px; /* Add padding to each column */
+    box-sizing: border-box; /* Include padding in the width */
+    background-color: #7f3b3b; /* Background color for demonstration */
+    margin-bottom: 20px; /* Add margin between rows */
+    display: grid;
+    margin-top: 12%;
+    margin-left: 5px;
 }
+
+.main_col .col_number {
+    width: 394px;
+
+    box-sizing: border-box; /* Include padding in the width */
+    background-color: #f2f2f2; /* Background color for demonstration */
+    margin-bottom: 20px; /* Add margin between rows */
+    font-size:64px;
+    font-weight:700;
+}
+
+
+
+.main_col .col_title {
+    width: 394px;
+
+    box-sizing: border-box; /* Include padding in the width */
+    background-color: #f2f2f2; /* Background color for demonstration */
+    margin-bottom: 20px; /* Add margin between rows */
+    font-size:36px;
+    font-weight:700;
+}
+
+
+.main_col .col_description {
+    width: 394px;
+    font-size:36px;
+    font-weight:400;
+}
+  
+
 
 @media (max-width: 767px) {
   /* On smaller screens, make columns take up 100% width */
@@ -377,5 +417,15 @@ section {
     
     .attributes .tag {
         margin: 10px 0; /* Add vertical spacing between tags */
+    }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .table_info {
+        /* Adjust width and other properties for smaller screens */
+        max-width: 100%; /* Set to 100% to allow full responsiveness */
+        border-radius: 30px; /* Modify border-radius for smaller screens if needed */
+        /* Any other modifications needed for smaller screens */
     }
 }
