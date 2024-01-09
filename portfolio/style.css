@@ -340,41 +340,35 @@ section {
 
 /*Table Info Div class*/
 .table_info {
-    width: 100%; /* Set initial width to fill the container */
-    max-width: 1237px; /* Set maximum width */
+    width: auto;
     height: auto; /* Allow height to adjust according to content */
     background: #b7f5d4;
     border-radius: 81px;
-    /* Additional styling */
+    padding: 7% 5% 8% 5%;
 
-    /* Add margin or padding as needed */
-    /* margin: 0 auto; */
 }
 
 .row {
   display: flex; /* Use flexbox for columns */
   flex-wrap: wrap; /* Allow wrapping on smaller screens */
-  justify-content: space-between; /* Space evenly between columns */
-  margin: 0 -10px; /* Negative margin to counteract padding */
+  justify-content: space-around; /* Space evenly between columns */
 }
 
+.row > * {
+    margin: 20px 65px; 
+}
 
 .main_col {
-
-    padding: 10px 50px 10px 50px; /* Add padding to each column */
-    box-sizing: border-box; /* Include padding in the width */
-    background-color: #7f3b3b; /* Background color for demonstration */
-    margin-bottom: 20px; /* Add margin between rows */
+    padding: 10px 50px 10px 50px; 
+    box-sizing: border-box; 
+    /*background-color: #7f3b3b; Background color for demonstration */
     display: grid;
-    margin-top: 12%;
-    margin-left: 5px;
 }
 
-.main_col .col_number {
+.main_col .number {
     width: 394px;
-
     box-sizing: border-box; /* Include padding in the width */
-    background-color: #f2f2f2; /* Background color for demonstration */
+    /*background-color: #f2f2f2; /* Background color for demonstration */
     margin-bottom: 20px; /* Add margin between rows */
     font-size:64px;
     font-weight:700;
@@ -382,18 +376,17 @@ section {
 
 
 
-.main_col .col_title {
+.main_col .title {
     width: 394px;
-
     box-sizing: border-box; /* Include padding in the width */
-    background-color: #f2f2f2; /* Background color for demonstration */
+    /*background-color: #f2f2f2; /* Background color for demonstration */
     margin-bottom: 20px; /* Add margin between rows */
     font-size:36px;
     font-weight:700;
 }
 
 
-.main_col .col_description {
+.main_col .description {
     width: 394px;
     font-size:36px;
     font-weight:400;
@@ -427,5 +420,6 @@ section {
         max-width: 100%; /* Set to 100% to allow full responsiveness */
         border-radius: 30px; /* Modify border-radius for smaller screens if needed */
         /* Any other modifications needed for smaller screens */
+        
     }
 }
