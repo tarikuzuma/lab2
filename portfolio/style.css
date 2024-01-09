@@ -7,6 +7,68 @@ body{
     background-color: #4f7b66;
 }
 
+
+header.nav_main {
+    position: fixed;
+    z-index: var(--zindex-nav);
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 35%;
+    padding: 0 var(--16px);
+    margin-top: 15px;
+    background-color: transparent; 
+    transition: background-color 0.3s; 
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 54px;
+}
+
+nav.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: var(--20px) auto 0;
+    position: relative;
+    z-index: var(--zindex-nav);
+}
+  
+  /* Style the navbar links */
+#navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+}
+
+/* Appear when scroll is enouugh for nav bar*/
+.greenBackground {
+    background-color: #203a30 !important;
+    opacity: 50%;
+    border-radius: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease; /* Add this to smooth the transition */
+}
+
+/* For smaller screens, adjust the width */
+@media (max-width: 768px) {
+    header.nav_main {
+        width: 90%; /* Adjust the width for smaller screens */
+    }
+}
+
+/* For cellphones or narrower screens */
+@media (max-width: 480px) {
+    header.nav_main {
+        width: 95%; /* Adjust width specifically for cellphones */
+    }
+}
+
 section {
     display: grid;
     place-items: center;
