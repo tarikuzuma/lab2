@@ -1,6 +1,7 @@
 <html>
 <body>
     <div id = "demo"></p>
+    <div id = "top"></p>
     <script type="text/javascript" src="lastfm_js/lastfm.api.cache.js"></script>
     <script type="text/javascript" src="lastfm_js/lastfm.api.js"></script>
     <script type="text/javascript" src="lastfm_js/lastfm.api.md5.js"></script>
@@ -56,7 +57,24 @@
                     } else {
                         console.log('An Error Occured. No recent tracks.');
                     }
-                },
+
+                    if (data.toptracks) {
+                        console.log('Top Tracking API request successful:', data);
+
+                        var top_name = data.toptracks.track[0].name;
+                        var top_artist = data.toptracks.track[0].artist.name;
+                        
+                        var text_display_top= top_text_display = top_name + ' by ' + top_artist;
+
+                        // Log most played track
+                        console.log('Most Played Track:', top_name, 'by', top_artist);
+                        document.getElementById("top").innerHTML = text_display_top;
+
+                    } else {
+                        console.log('An Error Occurred. No top tracks.');
+                    }
+                        },
+
                 error: function (code, message) {
                     console.error('API request failed:', code, message);
                 }

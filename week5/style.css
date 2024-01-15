@@ -224,7 +224,7 @@ footer {
 }
 
 .spotify .container .image {
-    margin-top: 4%;
+    margin-top: 14px;
     margin-left: 8%;
     margin-right: 5%;
 }
@@ -257,13 +257,27 @@ footer {
     color: black;
     font-size: x-large;
     word-wrap: break-word;
-    margin-bottom: -8px;
+    margin-bottom: -5px;
 }
 
 #song_author{
     color: #8582d7;
     font-size: x-large;
 }
+
+
+#most_played_song {
+    color: black;
+    font-size: x-large !important;
+    word-wrap: break-word;
+    margin-bottom: -5px;
+}
+
+#most_played_author {
+    color: #8582d7;
+    font-size: x-large !important;
+}
+
 
 /*CSS of right side*/
 
@@ -490,6 +504,9 @@ hr.line {
     margin-top: 1in
 
 }
+
+
+
 
 @media (max-width: 767px) {
   /* On smaller screens, make columns take up 100% width */

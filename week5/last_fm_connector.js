@@ -32,7 +32,7 @@ try {
                 var now_artist = nowPlaying.artist['#text'];
                 var text_display = now_song + ' by ' + now_artist;
 
-                //19 
+                //17 Max for Song Title
 
                 console.log(text_display);
 
@@ -77,6 +77,25 @@ try {
 
             } else {
                 console.log('An Error Occurred. No recent tracks.');
+            }
+
+            // Get most played song
+            console.log('Getting most played song.');
+            
+            if (data.toptracks) {
+                console.log('Top Tracking API request successful:', data);
+
+                var top_name = data.toptracks.track[0].name;
+                var top_artist = data.toptracks.track[0].artist.name;
+
+                // Log most played track
+                console.log('Most Played Track:', top_name, 'by', top_artist);
+
+                // Display most played track
+                document.getElementById("most_played_song").innerHTML = top_name;
+                document.getElementById("most_played_artist").innerHTML = top_artist;
+            } else {
+                console.log('An Error Occurred. No top tracks.');
             }
         },
         error: function (code, message) {

@@ -212,17 +212,33 @@
 
         <div class = "col">
           <div class = "col">
-            <div class = "spotify" style = "width: 669px;">
-              <img src="spotify.png">
-              <div class = "texts">
-                <div class = "now">
-                  On Repeat:
+
+            <div class = "spotify" style = "width: 669px">
+              <div class = "container">
+                <div class = "image">
+                  <img src="spotify.png">
                 </div>
-                <div class = "title">
-                  Teddy Picker <br> by <span class = "author"> Arctic Monkeys </span>
-                </div>
+                  <div class = "texts" 
+                  style= "position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  justify-content: center;
+                  text-align: center;">
+                    <div class = "now">
+                      Now Listening to:
+                    </div>
+                    <div id = "most_played_song">
+                      <!-- Temporary-->
+                      Teddy Picker
+                    </div>
+                    <div id = "most_played_author">
+                      <!-- Temporary-->
+                      by Arctic Monkeys     
+                    </div>
+                  </div>
               </div>
-          </div>
+            </div>
 
           </div>
           <div class = "col" style = "padding-left: 40px; padding-top: 30px;">
