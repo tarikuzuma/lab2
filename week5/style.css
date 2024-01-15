@@ -243,14 +243,15 @@ footer {
     padding-right: 20px
 }
 
-.spotify .title {
+#song_title {
     color: black;
     font-size: x-large;
     word-wrap: break-word;
 }
 
-.spotify .title .author{
+#song_author{
     color: #8582d7;
+    font-size: x-large;
 }
 
 /*CSS of right side*/

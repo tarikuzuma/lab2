@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Now Playing</title>
+    <!-- Include the Last.fm API scripts here if not already included -->
+    <!-- <script type="text/javascript" src="lastfm_js/lastfm.api.cache.js"></script> -->
+    <!-- <script type="text/javascript" src="lastfm_js/lastfm.api.js"></script> -->
+    <!-- <script type="text/javascript" src="lastfm_js/lastfm.api.md5.js"></script> -->
+</head>
+<body>
+    <section class="hidden">
+        <div class="main_info" id="section1">
+            <div class="left">
+                <div class="image">
+                    <img src="profile.jpg" alt="Profile Image">
+                </div>
+                <div class="spotify">
+                    <img src="spotify.png" alt="Spotify Logo">
+                    <div class="texts">
+                        <div class="now">
+                            Now Listening to:
+                        </div>
+                        <div id="title">
+                            <!-- Content dynamically filled by JavaScript -->
+                        </div>
+                        <div id="author">
+                            <!-- Content dynamically filled by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Include your external JavaScript file -->
+    <script type="text/javascript" src="your_script.js"></script>
+</body>
+</html>
