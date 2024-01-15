@@ -36,10 +36,10 @@
                         //console.log('Now Playing:', nowPlaying.name, 'by', nowPlaying.artist['#text']);
                         var now_song = nowPlaying.name;
                         var now_artist = nowPlaying.artist['#text'];
-                        var text_display = now_song + ' by ' + now_artist;
 
+                        var text_display = now_song + ' by ' + now_artist;
                         console.log(text_display);
-                        document.getElementById("demo").innerHTML = text_display;
+                        document.getElementById("demo").innerHTML = '<b>' + text_display + '</b>';
 
                     } else if (mostRecentTrack) {
 

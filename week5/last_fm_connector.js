@@ -32,9 +32,23 @@ try {
                 var now_artist = nowPlaying.artist['#text'];
                 var text_display = now_song + ' by ' + now_artist;
 
+                //19 
+
                 console.log(text_display);
-                document.getElementById("song_title").innerHTML = now_song;
-                document.getElementById("song_author").innerHTML = now_artist;
+
+                if (now_song.length > 17) {
+                    console.log('Song title is too long. Marquee activated.');
+                    document.getElementById("song_title").innerHTML = '<marquee>' + now_song + '</marquee>';
+                } else {
+                    document.getElementById("song_title").innerHTML = now_song;
+                }
+
+                if (now_artist.length > 15) {
+                    console.log('Artist name is too long. Marquee activated.');
+                    document.getElementById("song_author").innerHTML = '<marquee>' + 'by '+ now_artist + '</marquee>';
+                } else {
+                    document.getElementById("song_author").innerHTML = 'by '+ now_artist;
+                }
 
             } else if (mostRecentTrack) {
 
@@ -46,8 +60,20 @@ try {
                 var text_display = recent_song + ' by ' + recent_artist;
 
                 console.log(text_display);
-                document.getElementById("song_title").innerHTML = recent_song;
-                document.getElementById("song_author").innerHTML = recent_artist;
+
+                if (recent_song.length > 17) {
+                    console.log('Song title is too long. Marquee activated.');
+                    document.getElementById("song_title").innerHTML = '<marquee>' + recent_song + '</marquee>';
+                } else {
+                    document.getElementById("song_title").innerHTML = recent_song;
+                }
+
+                if (recent_artist.length > 15) {
+                    console.log('Artist name is too long. Marquee activated.');
+                    document.getElementById("song_author").innerHTML = '<marquee>' + 'by '+ recent_artist + '</marquee>';
+                } else {
+                    document.getElementById("song_author").innerHTML = 'by '+ recent_artist;
+                }
 
             } else {
                 console.log('An Error Occurred. No recent tracks.');
