@@ -537,3 +537,51 @@ hr.line {
         
     }
 }
+
+
+
+/* CSS for Projects.*/
+
+.sub_text {
+    opacity: 0; /* Initially hide sub_text */
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+
+@keyframes dropWord {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.drop_word {
+    display: inline-block;
+    animation: dropWord 1s ease-out;
+}
+
+.delayed_drop_word {
+    animation-delay: 1s; /* Longer delay for the second drop effect */
+    animation-fill-mode: forwards; /* Keep styles after animation completes */
+}
+
+.show-sub-text {
+    animation: appearSubText 1s ease-out; /* Define a new animation for sub_text */
+    animation-delay: 1s; /* Delay the start of the sub_text animation */
+    animation-fill-mode: forwards; /* Keep styles after animation completes */
+}
+
+@keyframes appearSubText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
