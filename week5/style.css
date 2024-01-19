@@ -14,7 +14,7 @@ body {
 
 header.nav_main {
     position: fixed;
-    z-index: var(--zindex-nav);
+    z-index: 100;
     top: 0;
     right: 0;
     left: 0;
@@ -35,7 +35,7 @@ nav.navigation {
     max-width: var(--max-width);
     margin: var(--20px) auto 0;
     position: relative;
-    z-index: var(--zindex-nav);
+    z-index: 100;
 }
   
   /* Style the navbar links */
