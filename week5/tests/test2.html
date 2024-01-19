@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @keyframes dropWord {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .drop-word {
+            display: inline-block;
+            animation: dropWord 1s ease-out;
+        }
+    </style>
+    <title>Drop Word Effect</title>
+</head>
+<body>
+    <h1>This is a <span class="drop-word">cool</span> effect!</h1>
+</body>
+</html>
