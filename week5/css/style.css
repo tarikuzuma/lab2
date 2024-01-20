@@ -1,9 +1,10 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
 html {
     scroll-behavior: smooth;
 }  
-
-/* Import Poppins font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 /* Apply Poppins font to the body */
 body {
@@ -540,65 +541,4 @@ hr.line {
         /* Any other modifications needed for smaller screens */
         
     }
-}
-
-
-
-/* CSS for Projects.*/
-
-.sub_text {
-    opacity: 0; /* Initially hide sub_text */
-    text-align: center;
-    font-size: 25px;
-    color: white;
-}
-
-@keyframes dropWord {
-    0% {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.drop_word {
-    display: inline-block;
-    animation: dropWord 1s ease-out;
-}
-
-.delayed_drop_word {
-    animation-delay: 1s; /* Longer delay for the second drop effect */
-    animation-fill-mode: forwards; /* Keep styles after animation completes */
-}
-
-.show-sub-text {
-    animation: appearSubText 1s ease-out; /* Define a new animation for sub_text */
-    animation-delay: 1s; /* Delay the start of the sub_text animation */
-    animation-fill-mode: forwards; /* Keep styles after animation completes */
-}
-
-@keyframes appearSubText {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-.cards_projects_main{
-    display: flex;
-    flex-direction: column;
-    text-align: justify;
-    text-justify: inter-word;
-    background: #b7f5d4;
-    margin-top: 1.5in;
-}
-
-.cards_projects_main .container {
-    padding-left: 20%;
-    padding-right: 20%;
 }
