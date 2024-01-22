@@ -1,4 +1,12 @@
 // spotifyScript.js
+
+/*
+    This script is used to connect to the Last.fm API and display the currently playing song.
+    It also displays the most played song.
+
+    It utilizes HTML DOM to display the song title and artist name.
+*/
+
 console.log('Script started for Spotify.');
 
 var cache = new LastFMCache();
