@@ -1,16 +1,14 @@
-/*window.addEventListener('scroll', revealContent);
-
-function revealContent() {
-  const intro = document.querySelector('.intro');
-  const content = document.querySelector('.content');
-  const introBottom = intro.getBoundingClientRect().bottom;
-
-  if (introBottom <= window.innerHeight) {
-    content.classList.add('visible');
-    content.classList.remove('hidden');
-  }
-}*/
-
+/*
+  Program uses classes , Functions, and Objects to reveal content when scrolled to.
+  The IntersectionObserver object is used to check if the element is in the viewport.
+  If it is, the class visible is added to the element.
+  The class visible contains the CSS to make the element visible.
+  The class hidden is used to hide the element.
+  The class hidden2 is used to hide the element.
+  The class visible2 is used to make the element visible.
+  The class visible2 contains the CSS to make the element visible.
+  The class hidden2 is used to hide the element.
+*/ 
 
 // Function to reveal content when scrolled to
 // Object to hold all the elements to be revealed
