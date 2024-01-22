@@ -1,3 +1,9 @@
+/*
+    Uses Browser BOM to get the cursor position on the screen
+    and then uses the animate() method to animate the cursor
+    to the new position.
+*/
+
 const cursorDot = document.querySelector("[data-cursor-dot]");
 const cursorOutline = document.querySelector("[data-cursor-outline]");
 
