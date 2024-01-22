@@ -176,3 +176,16 @@
     }
   }
   
+
+/*Added style for anchor tags in card*/
+.cards_projects_main .row a {
+  color: black;
+  text-decoration: none;
+}
+
+.cards_projects_main .row a:hover {
+  color: #4CAF50;
+  text-decoration: none;
+  transform: scale(1.15);
+  transition: transform 0.3s ease;
+}
