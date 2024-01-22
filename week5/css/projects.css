@@ -134,6 +134,8 @@
     background-image: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
     top: 15px;
     left: 85px;
+    overflow: hidden; /* Ensure the SVG is clipped within the container */
+
   }
 
   .img-avatar svg {
