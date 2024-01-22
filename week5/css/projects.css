@@ -1,6 +1,5 @@
 /* CSS for Projects.*/
 
-/* Media query for mobile devices */
 @media (max-width: 768px) {
     .cards_projects_main {
         flex-direction: column;
@@ -9,6 +8,10 @@
 
     .cards_projects_main .card {
         margin-right: 0; /* Remove margin between cards */
+    }
+
+    .cards_projects_main {
+      flex-direction: column; /* Change to column layout for mobile */
     }
 }
 
@@ -56,30 +59,35 @@
 }
 
 .cards_projects_main{
-    display: flex;
-    flex-direction: row;
-    text-align: justify;
-    text-justify: inter-word;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  text-align: justify;
+  text-justify: inter-word;
+  justify-content: center;
+  align-items: center; 
+  margin-bottom: 10%;
+  background-color: #16a085;
+  width: auto;
+  height: auto;
+  border-radius: 81px;
+  padding: 7% 3% 8% 3%;
 }
-
 
 
 .cards_projects_main .card {
     flex-grow: 1;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
     transition: 0.5s;
 }
 
-.cards_projects_main .card:first-child {
-    margin-right: 50px;
-}
+
 
 .card {
-    background: linear-gradient(to top, #abc072 0%, #94bb8b 100%);
+    /*    background: linear-gradient(to top, #b7f5d4 0%, #94bb8b 100%);*/
+    background: linear-gradient(to top, #b7f5d4 0%, #b7f5d4 100%);
     border-radius: 4px;
-    box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.5);
-    max-width: 400px;
+    max-width: 500px;
+    height: 300px;
     display: flex;
     flex-direction: row;
     border-radius: 25px;

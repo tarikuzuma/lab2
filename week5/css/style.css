@@ -19,7 +19,7 @@ header.nav_main {
     top: 0;
     right: 0;
     left: 0;
-    width: 35%;
+    width: 500px;
     padding: 0 var(--16px);
     margin-top: 15px;
     background-color: transparent; 
