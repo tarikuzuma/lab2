@@ -11,6 +11,9 @@ function revealContent() {
   }
 }*/
 
+
+// Function to reveal content when scrolled to
+// Object to hold all the elements to be revealed
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -25,6 +28,7 @@ const observer = new IntersectionObserver(entries => {
   });
 });
 
+// Select all the elements with the class hidden and add them to observer
 const hiddenElements = document.querySelectorAll('.hidden, .hidden2');
 hiddenElements.forEach(element => {
   observer.observe(element);
