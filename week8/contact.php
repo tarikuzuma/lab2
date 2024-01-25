@@ -30,11 +30,22 @@
     <div class = "cursor-dot" data-cursor-dot></div>
     <div class = "cursor-outline" data-cursor-outline></div>
     <script src = "js/cursor.js"></script>
-    
+
     <?php
         $username = "John Doe";
         echo "Hello, $username!";
         ?>
+
+    <!-- Testing If conditions -->
+      <?php
+      $age = 20;
+
+      if ($age >= 18) {
+          echo "You are an adult.";
+      } else {
+          echo "You are a minor.";
+      }
+      ?>
   
       <section class="hidden">
         <div class="main_top" style="height: 75vh;">
