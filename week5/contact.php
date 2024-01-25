@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Academic Projects</title>
+    <title>Contact</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type = "text/css" href = "css/cursor.css">
     <script defer src = "js/app.js"></script>
@@ -18,10 +18,10 @@
     <header class = "nav_main">
       <nav class = "navigation">
         <div id="navbar">
-          <a href="home.html">Home</a>
-          <a href="projects.html">Projects</a>
-          <a href="hobbies.html">Hobbies</a>
-          <a href="contact.html">Contact</a>
+          <a href="home.php">Home</a>
+          <a href="projects.php">Projects</a>
+          <a href="hobbies.php">Hobbies</a>
+          <a href="contact.php">Contact</a>
         </div>
       </nav>
     </header>
@@ -31,17 +31,19 @@
     <div class = "cursor-outline" data-cursor-outline></div>
     <script src = "js/cursor.js"></script>
   
-      <!-- Second Section of Page -->
       <section class="hidden">
-        <div class="main_top" style="height: 75%; margin-top: 10%; margin-bottom: 10%;">
-            <div class="text" style="font-size: 100px; ">
-                Academic Projects
+        <div class="main_top" style="height: 75vh;">
+            <div class="text" style="font-size: 200px;">
+                <span class="drop_word">Contacts</span>
             </div>
-            <div class="sub_text drop_word delayed_drop_word" style = "font-size:22px;">
-                I'm passionate about creating projects that fit my taste.
+
+            <div class="sub_text drop_word delayed_drop_word">
+                Conatcts in the form of cards <br>
+                !Coming Soon>            
             </div>
         </div>
       </section>
+
 
 
       <footer style = "margin-top: 100px; margin-bottom: 50px;">

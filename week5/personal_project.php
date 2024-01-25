@@ -18,10 +18,10 @@
     <header class = "nav_main">
       <nav class = "navigation">
         <div id="navbar">
-          <a href="home.html">Home</a>
-          <a href="projects.html">Projects</a>
-          <a href="hobbies.html">Hobbies</a>
-          <a href="contact.html">Contact</a>
+          <a href="home.php">Home</a>
+          <a href="projects.php">Projects</a>
+          <a href="hobbies.php">Hobbies</a>
+          <a href="contact.php">Contact</a>
         </div>
       </nav>
     </header>
