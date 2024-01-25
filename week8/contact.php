@@ -39,12 +39,56 @@
 
             <div class="sub_text drop_word delayed_drop_word">
                 Conatcts in the form of cards <br>
-                !Coming Soon>            
+                !Coming Soon> WOW
             </div>
         </div>
       </section>
 
+      <!-- Make a button that emails me! OMG THATS SO COOL! -->
+      <section class = "hidden">
+        <button class = "email_button">
+          Email Me!
+        </button>
+      </section>
 
+
+      <section class = "hidden">
+        <h2>Comments</h2>
+
+          <!-- Comment code in PHP -->
+
+          <?php
+          // Check if the form is submitted
+          if ($_SERVER["REQUEST_METHOD"] == "POST") {
+              $comment = $_POST["comment"];
+              $date = date("Y-m-d H:i:s"); // Get the current date and time
+
+              // Append the new comment to the comments file
+              file_put_contents("comments.txt", "$date - $comment\n", FILE_APPEND);
+          }
+
+          // Read and display existing comments
+          $comments = file("comments.txt", FILE_IGNORE_NEW_LINES);
+          if ($comments) {
+              foreach ($comments as $comment) {
+                  echo "<p>$comment</p>";
+              }
+          } else {
+              print "<p>No comments yet.</p>";
+          }
+          ?>
+
+          <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+              <label for="comment">Add a comment:</label>
+              <textarea name="comment" rows="4" cols="50"></textarea><br>
+              <button type="submit">Submit</button>
+          </form>
+
+          <!-- Code essentially lets user comment -->
+      </section>
+
+
+        
 
       <footer style = "margin-top: 100px; margin-bottom: 50px;">
 
