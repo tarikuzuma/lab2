@@ -30,6 +30,11 @@
     <div class = "cursor-dot" data-cursor-dot></div>
     <div class = "cursor-outline" data-cursor-outline></div>
     <script src = "js/cursor.js"></script>
+    
+    <?php
+        $username = "John Doe";
+        echo "Hello, $username!";
+        ?>
   
       <section class="hidden">
         <div class="main_top" style="height: 75vh;">
