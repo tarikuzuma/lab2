@@ -4,6 +4,8 @@
     <title>Academic Projects</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type = "text/css" href = "css/cursor.css">
+    <link rel = "stylesheet" type = "text/css" href = "css/projects.css"> 
+    <link rel = "stylesheet" type = "text/css" href = "css/style.css"> 
     <script defer src = "js/app.js"></script>
 
     <!-- Connect to LastFM API -->
@@ -33,7 +35,7 @@
   
       <!-- Second Section of Page -->
       <section class="hidden">
-        <div class="main_top" style="height: 75%; margin-top: 10%; margin-bottom: 10%;">
+        <div class="main_top" style="height: 75%; margin-top: 10%;">
             <div class="text" style="font-size: 100px; ">
                 Academic Projects
             </div>
@@ -42,6 +44,41 @@
             </div>
         </div>
       </section>
+
+      <!-- Project 1 -->
+      <section class="hidden project_section">
+        <div class="project_content">
+            <img src="assets/projects/academic_projects/1.Main.png" class="project_image">
+            <div class="right">
+                <div class="title_main job_title">
+                    Project 1
+                </div>
+
+                <div class="about">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies aliquam,
+                    nunc nisi aliquet nunc, vitae aliquam nunc nisi quis nunc. Nullam auctor, nisl eget ultricies aliquam,
+                    nunc nisi aliquet nunc, vitae aliquam nunc nisi quis nunc. Nullam auctor, nisl eget ultricies aliquam,
+                    nunc nisi aliquet nunc, vitae aliquam nunc nisi quis nunc. Nullam auctor, nisl eget ultricies aliquam,
+                    nunc nisi aliquet nunc, vitae aliquam nunc nisi quis nunc. Nullam auctor, nisl eget ultricies aliquam,
+                    nunc nisi aliquet nunc, vitae aliquam nunc nisi quis nunc. Nullam auctor, nisl eget ultricies aliquam,
+                    nunc nisi aliquet nunc, vitae aliquam nunc nisi quis nunc.
+
+                    <div class="attributes">
+                        <div class="tag tag1 hidden2">
+                            Open to Collaborations
+                        </div>
+                        <div class="tag tag2 hidden2">
+                            Willing to Learn
+                        </div>
+                        <div class="tag tag3 hidden2">
+                            Exploring Limits
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
 
 
       <footer style = "margin-top: 100px; margin-bottom: 50px;">

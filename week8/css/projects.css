@@ -205,3 +205,61 @@
   transform: scale(1.15);
   transition: transform 0.3s ease;
 }
+
+.project_section {
+  height: auto;
+  background-color: #b7f5d4;
+  padding: 50px;
+  margin: 20px 50px 20px 50px;
+  border-radius: 25px;
+}
+
+.project_content {
+  display: flex;
+  align-items: center; /* Vertically center the content */
+  justify-content: space-around; /* Horizontally center the content */
+}
+
+.project_image {
+  max-width: 50%; /* Ensure the image doesn't exceed its container's width */
+  max-height: 50%; /* Ensure the image doesn't exceed its container's height */
+}
+
+
+
+
+.project_content .right{
+  display: flex;
+  flex-direction: column; /* Arrange items in a column */
+}
+
+.title_main {
+  font-size: 40px;
+  font-weight: 700; 
+  word-wrap: break-word;
+}
+
+.job_title {
+  color: #79E19C; 
+}
+
+
+.project_content .about{
+  color: white;
+  font-size: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.project_content .tags {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  color: white;
+}
+
+.project_content .attributes{
+  display: flex;
+  flex-direction: row; 
+  justify-content: center; /* Center the items horizontally */
+}
