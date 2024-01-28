@@ -54,17 +54,25 @@ const buttons = document.querySelectorAll("[data-carousel-button]")
 // Add animation to the carousel
 buttons.forEach(button => {
   button.addEventListener("click", () => {
-    const offset = button.dataset.carouselButton === "next" ? 1 : -1
-    const slides = button
-      .closest("[data-carousel]")
-      .querySelector("[data-slides]")
+    const offset = button.dataset.carouselButton === "next" ? 1 : -1;
+    changeSlide(offset);
+  });
+});
 
-    const activeSlide = slides.querySelector("[data-active]")
-    let newIndex = [...slides.children].indexOf(activeSlide) + offset
-    if (newIndex < 0) newIndex = slides.children.length - 1
-    if (newIndex >= slides.children.length) newIndex = 0
+// Function to change the slide based on the offset
+function changeSlide(offset) {
+  const slides = document.querySelector("[data-carousel] [data-slides]");
+  const activeSlide = slides.querySelector("[data-active]");
+  let newIndex = [...slides.children].indexOf(activeSlide) + offset;
 
-    slides.children[newIndex].dataset.active = true
-    delete activeSlide.dataset.active
-  })
-})
+  if (newIndex < 0) newIndex = slides.children.length - 1;
+  if (newIndex >= slides.children.length) newIndex = 0;
+
+  slides.children[newIndex].dataset.active = true;
+  delete activeSlide.dataset.active;
+}
+
+// Set an interval to change the slide every 5 seconds
+setInterval(() => {
+  changeSlide(1); // Change to the next slide
+}, 4000);

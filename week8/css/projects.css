@@ -228,17 +228,21 @@
 .project_content .container{
   display: flex;
   flex-direction: column; /* Arrange items in a column */
-}
-
-.title_main {
-  font-size: 40px;
-  font-weight: 700; 
-  word-wrap: break-word;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .proj_title {
+  font-size: 40px;
+  font-weight: 700; 
+  word-wrap: break-word;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
   color: #79E19C; 
 }
+
 
 
 .project_content .about{
@@ -260,6 +264,7 @@
   flex-direction: row; 
   justify-content: center; /* Center the items horizontally */
   color: white;
+  margin-top: 10px;
 }
 
 .github_link {
@@ -280,9 +285,10 @@ https://github.com/WebDevSimplified/js-css-carousel
 */
 
 .carousel {
-  width: 140vw;
-  height: 80vh;
+  width: 60%; /* Adjust the width as needed */
+  height: 60vh; /* Adjust the height as needed */
   position: relative;
+  margin: 0 auto; /* Center the carousel on the page */
 }
 
 .carousel > ul {
