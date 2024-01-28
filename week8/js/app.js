@@ -52,14 +52,17 @@ const buttons = document.querySelectorAll("[data-carousel-button]")
 
 // project.css
 // Add animation to the carousel
+let intervalId; // Variable to store the interval ID
+
 buttons.forEach(button => {
   button.addEventListener("click", () => {
+    clearInterval(intervalId); // Clear the interval when a button is clicked
     const offset = button.dataset.carouselButton === "next" ? 1 : -1;
     changeSlide(offset);
+    startCarousel(); // Restart the carousel timer
   });
 });
 
-// Function to change the slide based on the offset
 function changeSlide(offset) {
   const slides = document.querySelector("[data-carousel] [data-slides]");
   const activeSlide = slides.querySelector("[data-active]");
@@ -72,7 +75,12 @@ function changeSlide(offset) {
   delete activeSlide.dataset.active;
 }
 
-// Set an interval to change the slide every 5 seconds
-setInterval(() => {
-  changeSlide(1); // Change to the next slide
-}, 4000);
+// Function to start the automatic carousel timer
+function startCarousel() {
+  intervalId = setInterval(() => {
+    changeSlide(1); 
+  }, 4000);
+}
+
+// Start the carousel timer initially
+startCarousel();
