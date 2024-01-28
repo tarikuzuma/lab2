@@ -206,29 +206,31 @@
   transition: transform 0.3s ease;
 }
 
+/* Project Section */
 .project_section {
   height: auto;
   background-color: #b7f5d4;
   padding: 50px;
-  margin: 20px 50px 20px 50px;
+  margin: 20px 50px 70px 50px;
   border-radius: 25px;
 }
 
 .project_content {
   display: flex;
   align-items: center; /* Vertically center the content */
-  justify-content: space-around; /* Horizontally center the content */
 }
 
 .project_image {
-  max-width: 50%; /* Ensure the image doesn't exceed its container's width */
-  max-height: 50%; /* Ensure the image doesn't exceed its container's height */
+  max-width: 40%; /* Ensure the image doesn't exceed its container's width */
+  max-height: 40%; /* Ensure the image doesn't exceed its container's height */
 }
 
+.project_content .container{
+  display: flex;
+  flex-direction: column; /* Arrange items in a column */
+}
 
-
-
-.project_content .right{
+.project_content .container{
   display: flex;
   flex-direction: column; /* Arrange items in a column */
 }
@@ -239,7 +241,7 @@
   word-wrap: break-word;
 }
 
-.job_title {
+.proj_title {
   color: #79E19C; 
 }
 
@@ -262,4 +264,89 @@
   display: flex;
   flex-direction: row; 
   justify-content: center; /* Center the items horizontally */
+  color: white;
+}
+
+.github_link {
+  color: #79E19C;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.github_link {
+  text-decoration: none;
+}
+
+/* Carousel CSS.
+
+Copied the Source code from: 
+https://github.com/WebDevSimplified/js-css-carousel
+*/
+
+.carousel {
+  width: 140vw;
+  height: 80vh;
+  position: relative;
+}
+
+.carousel > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+}
+
+.slide > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0ms;
+}
+
+.carousel-button {
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, .5);
+  cursor: pointer;
+  border-radius: .25rem;
+  padding: 0 .5rem;
+  background-color: rgba(0, 0, 0, .1);
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+  color: white;
+  background-color: rgba(0, 0, 0, .2);
+}
+
+.carousel-button:focus {
+  outline: 1px solid black;
+}
+
+.carousel-button.prev {
+  left: 1rem;
+}
+
+.carousel-button.next {
+  right: 1rem;
 }

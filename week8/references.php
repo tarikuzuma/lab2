@@ -23,5 +23,8 @@
 
     Images <br>
     https://cdn-developer-wp.arc.dev/wp-content/uploads/2022/06/coding-programming-project-ideas-1128x635.jpg
+
+    Carousel <br>
+    https://github.com/WebDevSimplified/js-css-carousel
 </body>
 </html>
