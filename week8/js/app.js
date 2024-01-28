@@ -48,39 +48,40 @@ function scrollFunction() {
   }
 }
 
-const buttons = document.querySelectorAll("[data-carousel-button]")
+function setupCarousel(carousel) {
+  const buttons = carousel.querySelectorAll("[data-carousel-button]");
+  let intervalId;
 
-// project.css
-// Add animation to the carousel
-let intervalId; // Variable to store the interval ID
+  function changeSlide(offset) {
+    const slides = carousel.querySelector("[data-slides]");
+    const activeSlide = slides.querySelector("[data-active]");
+    let newIndex = [...slides.children].indexOf(activeSlide) + offset;
 
-buttons.forEach(button => {
-  button.addEventListener("click", () => {
-    clearInterval(intervalId); // Clear the interval when a button is clicked
-    const offset = button.dataset.carouselButton === "next" ? 1 : -1;
-    changeSlide(offset);
-    startCarousel(); // Restart the carousel timer
+    if (newIndex < 0) newIndex = slides.children.length - 1;
+    if (newIndex >= slides.children.length) newIndex = 0;
+
+    slides.children[newIndex].dataset.active = true;
+    delete activeSlide.dataset.active;
+  }
+
+  function startCarousel() {
+    intervalId = setInterval(() => {
+      changeSlide(1);
+    }, 5000);
+  }
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      clearInterval(intervalId);
+      const offset = button.dataset.carouselButton === "next" ? 1 : -1;
+      changeSlide(offset);
+      startCarousel();
+    });
   });
+
+  startCarousel();
+}
+
+document.querySelectorAll("[data-carousel]").forEach((carousel) => {
+  setupCarousel(carousel);
 });
-
-function changeSlide(offset) {
-  const slides = document.querySelector("[data-carousel] [data-slides]");
-  const activeSlide = slides.querySelector("[data-active]");
-  let newIndex = [...slides.children].indexOf(activeSlide) + offset;
-
-  if (newIndex < 0) newIndex = slides.children.length - 1;
-  if (newIndex >= slides.children.length) newIndex = 0;
-
-  slides.children[newIndex].dataset.active = true;
-  delete activeSlide.dataset.active;
-}
-
-// Function to start the automatic carousel timer
-function startCarousel() {
-  intervalId = setInterval(() => {
-    changeSlide(1); 
-  }, 4000);
-}
-
-// Start the carousel timer initially
-startCarousel();
