@@ -216,18 +216,13 @@
 }
 
 .project_content {
-  display: flex;
+  display:grid;
   align-items: center; /* Vertically center the content */
 }
 
 .project_image {
   max-width: 40%; /* Ensure the image doesn't exceed its container's width */
   max-height: 40%; /* Ensure the image doesn't exceed its container's height */
-}
-
-.project_content .container{
-  display: flex;
-  flex-direction: column; /* Arrange items in a column */
 }
 
 .project_content .container{
