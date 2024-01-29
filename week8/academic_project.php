@@ -194,22 +194,26 @@
             
             <div class="container">
                 <div class="proj_title">
-                  <a class = "github_link" href = "https://github.com/tarikuzuma/Bootcamp-3T2021-SHS-Fursuit-of-Justice">
+                  <a class = "github_link" href = "https://www.figma.com/proto/yS7alHg25uo35gzYXZDpuV/UI-guide-oWo?type=design&node-id=15-144&t=ej5I2cQQAToWWeBd-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A3&mode=design">
                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
                       <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
                     </svg>           
-                  Project 1 
+                  Cylock Mobilearo (2021)
                   </a>
                 </div>
 
                 <div class="about">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies aliquam,
-                    nunc nisi aliquet nunc, vitae aliquam nunc nisi quis nunc. Nullam auctor, nisl eget ultricies aliquam,
-                    nunc nisi aliquet nunc, vitae aliquam nunc nisi quis nunc. Nullam auctor, nisl eget ultricies aliquam,
-                    nunc nisi aliquet nunc, vitae aliquam nunc nisi quis nunc. Nullam auctor, nisl eget ultricies aliquam,
-                    nunc nisi aliquet nunc, vitae aliquam nunc nisi quis nunc. Nullam auctor, nisl eget ultricies aliquam,
-                    nunc nisi aliquet nunc, vitae aliquam nunc nisi quis nunc. Nullam auctor, nisl eget ultricies aliquam,
-                    nunc nisi aliquet nunc, vitae aliquam nunc nisi quis nunc.
+                    A project we made for our Entrepenuership Subject last Senior Highschool. The project is a concept for a mobile application
+                    that allows users to access their files from anywhere. The project is made using Figma, a UI/UX Design Software. The project
+                    is a concept, which is why it looks lacking. <br><br>
+                    Access the pseudo-site through this <a class = "github_link" href = "https://cylockmb.weebly.com/"> link </a> as well!
+
+                    <ol>
+                      <li>Jaden Mae Ong - Cheif Executive Officer</li>
+                      <li>Edwin Gumba - Concept Idealist</li>
+                      <li>Kai Butalid - Interface Manager</li>
+                    </ol>
+
                 </div>
 
                 
@@ -219,13 +223,13 @@
                 <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
                 <ul data-slides>
                   <li class="slide" data-active>
-                    <img src="https://source.unsplash.com/78A265wPiO4" alt="Nature Image #1">
+                    <img src="assets/projects/academic_projects/proj3/1.JPG" alt="Site Screenshot 1">
                   </li>
                   <li class="slide">
-                    <img src="https://source.unsplash.com/eOpewngf68w" alt="Nature Image #2">
+                    <img src="assets/projects/academic_projects/proj3/2.JPG" alt="Site Screenshot 2">
                   </li>
                   <li class="slide">
-                    <img src="https://source.unsplash.com/ndN00KmbJ1c" alt="Nature Image #3">
+                    <img src="assets/projects/academic_projects/proj3/3.JPG" alt="Site Screenshot 3">
                   </li>
                 </ul>
               </div>
