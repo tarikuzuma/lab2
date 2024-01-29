@@ -78,7 +78,7 @@
 
                 </div>
 
-                
+            <!-- Carousel Pictures -->
             <div class = "container">
               <div class="carousel" data-carousel>
                 <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
@@ -110,19 +110,19 @@
             </div>
 
 
-                <div class="attributes">
-                  <div class="tag tag1 hidden2">
-                      100% Python & RenPy
-                  </div>
-                  <div class="tag tag2 hidden2">
-                      Visual Novel
-                  </div>
-                  <div class="tag tag3 hidden2">
-                      Lawyer-Centric!
-                  </div>
+              <div class="attributes">
+                <div class="tag tag1 hidden2">
+                    100% Python & RenPy
+                </div>
+                <div class="tag tag2 hidden2">
+                    Visual Novel
+                </div>
+                <div class="tag tag3 hidden2">
+                    Lawyer-Centric!
+                </div>
               </div>
               
-            </div>
+          </div>
             
         </div>
       </section>
