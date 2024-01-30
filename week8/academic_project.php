@@ -69,6 +69,9 @@
                     main storyline of the game. The game is currently unfinished, but maybe more content will come someday. <br>
                     <br>
 
+                    Languages: Python & RenPy <br>
+                    Softwares Used: Figma, RenPy, Visual Studio Code, GitHub <br>
+
                     <ol>
                       <li>Jaden Mae Ong - Lead Artist & Story Writer</li>
                       <li>Edwin Gumba - Lead Programmer & Story Writer</li>
@@ -146,7 +149,10 @@
                 <div class="about">
                     A working full-stack site that allows users to create mock votes that is saved per account.
                     The site is created using HTML, CSS, Javascript, JSP, and MySQL. The site is hosted in a local server.
-                    Project is only a concept, which is why it looks lacking.
+                    Project is only a concept, which is why it looks lacking. <br><br>
+
+                    Languages: HTML, CSS, Javascript, JSP, MySQL, <br>
+                    Software: XAMPP, Eclipse Web Dev<br>
                 </div>
 
                 
@@ -186,7 +192,7 @@
         </div>
       </section>
 
-      <!-- Project 2 -->
+      <!-- Project 3 -->
       <section class="hidden project_section">
         <div class="project_content">
 
@@ -206,7 +212,10 @@
                     A project we made for our Entrepenuership Subject last Senior Highschool. The project is a concept for a mobile application
                     that allows users to access their files from anywhere. The project is made using Figma, a UI/UX Design Software. The project
                     is a concept, which is why it looks lacking. <br><br>
-                    Access the pseudo-site through this <a class = "github_link" href = "https://cylockmb.weebly.com/"> link </a> as well!
+                    Access the pseudo-site through this <a class = "github_link" href = "https://cylockmb.weebly.com/"> link </a> as well! <br>
+                    <br>
+
+                    Software: Figma<br>
 
                     <ol>
                       <li>Jaden Mae Ong - Cheif Executive Officer</li>
