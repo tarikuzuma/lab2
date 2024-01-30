@@ -177,13 +177,13 @@
 
                 <div class="attributes">
                   <div class="tag tag1 hidden2">
-                      100% Python & RenPy
+                      Java Servlet Page
                   </div>
                   <div class="tag tag2 hidden2">
-                      Visual Novel
+                      Full Stack
                   </div>
                   <div class="tag tag3 hidden2">
-                      Lawyer-Centric!
+                      Database Management
                   </div>
               </div>
               
@@ -247,13 +247,13 @@
 
                 <div class="attributes">
                   <div class="tag tag1 hidden2">
-                      100% Python & RenPy
+                      UI/UX Designing!
                   </div>
                   <div class="tag tag2 hidden2">
-                      Visual Novel
+                      Android Layout
                   </div>
                   <div class="tag tag3 hidden2">
-                      Lawyer-Centric!
+                      Technopreneurship?
                   </div>
               </div>
               
