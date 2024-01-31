@@ -112,13 +112,13 @@
 
               <div class="attributes">
                 <div class="tag tag1 hidden2">
-                    100% Python & RenPy
+                    Designing Algorithms!
                 </div>
                 <div class="tag tag2 hidden2">
-                    Visual Novel
+                    Research Paper
                 </div>
                 <div class="tag tag3 hidden2">
-                    Lawyer-Centric!
+                    Analysis
                 </div>
               </div>
               
@@ -186,13 +186,13 @@
 
               <div class="attributes">
                 <div class="tag tag1 hidden2">
-                    100% Python & RenPy
+                    Data Structures
                 </div>
                 <div class="tag tag2 hidden2">
-                    Visual Novel
+                    Python Designing
                 </div>
                 <div class="tag tag3 hidden2">
-                    Lawyer-Centric!
+                    Workout Fanatics!
                 </div>
               </div>
               
