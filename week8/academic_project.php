@@ -45,6 +45,80 @@
         </div>
       </section>
 
+    <!-- Project 1 -->
+    <section class="hidden project_section">
+        <div class="project_content">
+
+
+            
+            <div class="container">
+                <div class="proj_title">
+                  <a class = "github_link" href = "https://github.com/tarikuzuma/RamFit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                      <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                    </svg>           
+                  RamFit (Comprehensive Workout App) (2023)
+                  </a>
+                </div>
+
+                <div class="about">
+                "RamFit" stands as a robust fitness application meticulously crafted to serve individuals across all fitness proficiency levels, 
+                accommodating beginners, intermediate users, and seasoned workout enthusiasts alike. Developed using Python, the application features 
+                a user-friendly interface designed with PyQt Designer, specifically leveraging version 5. This project not only provided a platform to 
+                enhance Python programming skills but also served as an excellent opportunity to delve into Object-Oriented Programming (OOP), with PyQt 
+                necessitating the application of OOP principles in the creation of its graphical user interface.. <br>
+                    <br>
+
+                    Access the user manual through this <a class = "github_link" href = "https://drive.google.com/file/d/1_56FBFA4oKwXCU_6mdEd1w7AJrOjbb0T/view?usp=sharing"> link </a> as well! <br><br>
+
+
+                    Languages: Python <br>
+                    Softwares Used: Figma, PyQt Designer, Visual Studio Code<br>
+                </div>
+
+            <!-- Carousel Pictures -->
+            <div class = "container">
+              <div class="carousel" data-carousel>
+                <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
+                <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+                <ul data-slides>
+                  <li class="slide" data-active>
+                    <img src="assets/projects/academic_projects/proj4/5.png" alt="Game Screenshot 5">
+                  </li>
+                  <li class="slide">
+                    <img src="assets/projects/academic_projects/proj4/2.JPG" alt="Game Screenshot 2">
+                  </li>
+                  <li class="slide">
+                    <img src="assets/projects/academic_projects/proj4/4.png" alt="Game Screenshot 4">
+                  </li>
+                  <li class="slide">
+                    <img src="assets/projects/academic_projects/proj4/1.JPG" alt="Game Screenshot 1">
+                  </li>
+                  <li class="slide">
+                    <img src="assets/projects/academic_projects/proj4/3.png" alt="Game Screenshot 3">
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+
+              <div class="attributes">
+                <div class="tag tag1 hidden2">
+                    100% Python & RenPy
+                </div>
+                <div class="tag tag2 hidden2">
+                    Visual Novel
+                </div>
+                <div class="tag tag3 hidden2">
+                    Lawyer-Centric!
+                </div>
+              </div>
+              
+          </div>
+            
+        </div>
+      </section>
+
       <!-- Project 1 -->
       <section class="hidden project_section">
         <div class="project_content">
