@@ -369,8 +369,11 @@
                     that allows users to access their files from anywhere. The project is made using Figma, a UI/UX Design Software. The project
                     is a concept, which is why it looks lacking. <br><br>
                     Access the pseudo-site through this <a class = "github_link" href = "https://cylockmb.weebly.com/"> link </a> as well! <br>
-                    <br>
+                  
 
+                    Access the Figma through this <a class = "github_link" href = "https://www.figma.com/proto/yS7alHg25uo35gzYXZDpuV/UI-guide-oWo?type=design&node-id=15-144&t=ej5I2cQQAToWWeBd-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A3&mode=design"> link </a> <br>
+
+                    <br>
                     Software: Figma<br>
 
                     <ol>
