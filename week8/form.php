@@ -117,45 +117,47 @@
     </section>
       
     <?php
-        // PHP code to insert data to a database from the form
+      try {
+          // PHP code to insert data to a database from the form
 
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "webprogss221";
+          $servername = "localhost";
+          $username = "root";
+          $password = "";
+          $dbname = "webprogss221";
 
-        $conn = mysqli_connect($servername, $username, $password, $dbname);
+          $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-        // Check connection
-        if ($conn->connect_error) {
-          throw new Exception("Connection failed: " . $conn->connect_error);
+          // Check connection
+          if ($conn->connect_error) {
+              throw new Exception("Connection failed: " . $conn->connect_error);
+          }
+
+          // Taking all 5 values from the form data(input)
+          $user_name = $_REQUEST['user_name'];
+          $mobile_number = $_REQUEST['mobile_number'];
+          $comment = $_REQUEST['comment'];
+
+          // We are going to insert the data into our sampleDB table
+          $sql = "INSERT INTO edgumba_myguest VALUES (NULL, '$user_name', '$mobile_number', '$comment', CURRENT_TIMESTAMP)";
+
+          // Check if the query is successful
+          if(mysqli_query($conn, $sql)){
+              echo "<h3>data stored in a database successfully."
+                  . " Please browse your localhost php my admin"
+                  . " to view the updated data</h3>";
+
+              echo nl2br("\n$user_name\n $mobile_number\n "
+                  . "$comment\n");
+          } else {
+              throw new Exception("Error: Hush! Sorry $sql. " . mysqli_error($conn));
+          }
+      } catch (Exception $e) {
+          echo "Error: " . $e->getMessage();
+      } finally {
+          // Close connection
+          $conn->close();
       }
-
-        // Taking all 5 values from the form data(input)
-        $user_name = $_REQUEST['user_name'];
-        $mobile_number = $_REQUEST['mobile_number'];
-        $comment = $_REQUEST['comment'];
-
-
-        // We are going to insert the data into our sampleDB table
-        $sql = "INSERT INTO edgumba_myguest VALUES (NULL, '$user_name', '$mobile_number', '$comment', CURRENT_TIMESTAMP)";
-
-        // Check if the query is successful
-        if(mysqli_query($conn, $sql)){
-            echo "<h3>data stored in a database successfully."
-                . " Please browse your localhost php my admin"
-                . " to view the updated data</h3>";
-
-            echo nl2br("\n$user_name\n $mobile_number\n "
-                . "$comment\n");
-        } else{
-            echo "ERROR: Hush! Sorry $sql. "
-                . mysqli_error($conn);
-        }
-
-        // Close connection
-        mysqli_close($conn);
-        ?>
+    ?>
       
       <!-- Display the table -->
       <!-- Test -->
