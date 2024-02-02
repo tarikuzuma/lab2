@@ -130,6 +130,7 @@
     </section>
       
       <!-- Display the table -->
+      <!-- Test -->
     <section = "hidden">
 
           <?php
