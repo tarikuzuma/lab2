@@ -92,42 +92,70 @@
         ?>
 
         <h2>PHP Form Validation Example</h2>
+
         <p><span class="error">* required field</span></p>
-        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-        Name: <input type="text" name="name" value="<?php echo $name;?>">
-        <span class="error">* <?php echo $nameErr;?></span>
-        <br><br>
-        E-mail: <input type="text" name="email" value="<?php echo $email;?>">
-        <span class="error">* <?php echo $emailErr;?></span>
-        <br><br>
-        Website: <input type="text" name="website" value="<?php echo $website;?>">
-        <span class="error"><?php echo $websiteErr;?></span>
-        <br><br>
-        Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
-        <br><br>
-        Gender:
-        <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
-        <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
-        <input type="radio" name="gender" <?php if (isset($gender) && $gender=="other") echo "checked";?> value="other">Other  
-        <span class="error">* <?php echo $genderErr;?></span>
-        <br><br>
-        <input type="submit" name="submit" value="Submit">  
+
+        <form method ="post">
+
+          <p>
+              <label for="firstName">Username:</label>
+              <input type="text" name="user_name" id="Username" required>
+          </p>
+          <p>
+              <label for="mobileNumber">Mobile Number (Optional):</label>
+              <input type="text" name="mobile_number" id="mobileNumber">
+          </p>
+          <p>
+              <label for="Comment">Comment:</label>
+              <textarea name="comment" id="Comment" rows="4" cols="50" required></textarea>
+          </p>
+
+          <input type="submit" value="Submit">
+          
         </form>
 
-        <?php
-        echo "<h2>Your Input:</h2>";
-        echo $name;
-        echo "<br>";
-        echo $email;
-        echo "<br>";
-        echo $website;
-        echo "<br>";
-        echo $comment;
-        echo "<br>";
-        echo $gender;
-        ?>
-
     </section>
+      
+    <?php
+        // PHP code to insert data to a database from the form
+
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "webprogss221";
+
+        $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+        // Check connection
+        if ($conn->connect_error) {
+          throw new Exception("Connection failed: " . $conn->connect_error);
+      }
+
+        // Taking all 5 values from the form data(input)
+        $user_name = $_REQUEST['user_name'];
+        $mobile_number = $_REQUEST['mobile_number'];
+        $comment = $_REQUEST['comment'];
+
+
+        // We are going to insert the data into our sampleDB table
+        $sql = "INSERT INTO edgumba_myguest VALUES (NULL, '$user_name', '$mobile_number', '$comment', CURRENT_TIMESTAMP)";
+
+        // Check if the query is successful
+        if(mysqli_query($conn, $sql)){
+            echo "<h3>data stored in a database successfully."
+                . " Please browse your localhost php my admin"
+                . " to view the updated data</h3>";
+
+            echo nl2br("\n$user_name\n $mobile_number\n "
+                . "$comment\n");
+        } else{
+            echo "ERROR: Hush! Sorry $sql. "
+                . mysqli_error($conn);
+        }
+
+        // Close connection
+        mysqli_close($conn);
+        ?>
       
       <!-- Display the table -->
       <!-- Test -->
