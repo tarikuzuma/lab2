@@ -128,6 +128,61 @@
         ?>
 
     </section>
+      
+      <!-- Display the table -->
+    <section = "hidden">
+
+          <?php
+      $servername = "localhost";
+      $username = "root";
+      $password = "";
+      $dbname = "webprogss221";
+
+      // Create connection
+      $conn = new mysqli($servername, $username, $password, $dbname);
+
+      // Check connection
+      if ($conn->connect_error) {
+          die("Connection failed: " . $conn->connect_error);
+      }
+
+      // SQL Query to Get Total Comments
+      $totalCommentsSql = "SELECT COUNT(*) AS totalComments FROM edgumba_myguest";
+      $totalCommentsResult = $conn->query($totalCommentsSql);
+
+      // Check if there are results
+      // Check if it is greater than 0 or else it will display 0 results
+      if ($totalCommentsResult->num_rows > 0) {
+          $totalCommentsRow = $totalCommentsResult->fetch_assoc();
+          $totalComments = $totalCommentsRow["totalComments"];
+          echo "<table><tr><th>Total Comments</th></tr><tr><td>$totalComments</td></tr></table>";
+      } else {
+          echo "0 results for total comments.. OR you didnt make a table did ya?";
+      }
+
+      // SQL Query to Get Comment Details
+      $commentDetailsSql = "SELECT * FROM edgumba_myguest";
+      $commentDetailsResult = $conn->query($commentDetailsSql);
+
+      // Check if there are results
+      if ($commentDetailsResult->num_rows > 0) {
+          echo "<table><tr><th>User ID</th><th>User Name</th><th>Mobile Number</th><th>Comment</th><th>Date Posted</th></tr>";
+
+          // Output data of each row. DEPENDENT on the SQL TABLE
+          while ($row = $commentDetailsResult->fetch_assoc()) {
+              echo "<tr><td>".$row["user_id"]."</td><td>".$row["user_name"]."</td><td>".$row["mobile_number"]."</td><td>".$row["comment"]."</td><td>".$row["date_posted"]."</td></tr>";
+          }
+
+          echo "</table>";
+      } else {
+          echo "0 results for comment details or you didnt make a table did ya?!";
+      }
+
+      // Close the database connection
+      $conn->close();
+      ?>
+
+    </section>
 
 <footer style = "margin-top: 100px; margin-bottom: 50px;">
 
