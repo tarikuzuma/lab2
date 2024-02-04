@@ -62,13 +62,10 @@
                 </div>
 
                 <div class="about">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies aliquam,
-                    nunc nisi aliquet nunc, vitae aliquam nunc nisi quis nunc. Nullam auctor, nisl eget ultricies aliquam,
-                    nunc nisi aliquet nunc, vitae aliquam nunc nisi quis nunc. Nullam auctor, nisl eget ultricies aliquam,
-                    nunc nisi aliquet nunc, vitae aliquam nunc nisi quis nunc. Nullam auctor, nisl eget ultricies aliquam,
-                    nunc nisi aliquet nunc, vitae aliquam nunc nisi quis nunc. Nullam auctor, nisl eget ultricies aliquam,
-                    nunc nisi aliquet nunc, vitae aliquam nunc nisi quis nunc. Nullam auctor, nisl eget ultricies aliquam,
-                    nunc nisi aliquet nunc, vitae aliquam nunc nisi quis nunc.
+                    Open Sourced Unity Game wherein you act as a ghost player eradicating evil to save your fellow NPC friends!<br><br>
+
+                    Languages: C# <br>
+                    Softwares Used: Unity (2022), Figma, Visual Studio Code, Photoshop, GitHub<br>
                 </div>
 
                 
@@ -93,13 +90,13 @@
 
                 <div class="attributes">
                   <div class="tag tag1 hidden2">
-                      100% Python & RenPy
+                      Unity
                   </div>
                   <div class="tag tag2 hidden2">
-                      Visual Novel
+                      Game Development!
                   </div>
                   <div class="tag tag3 hidden2">
-                      Lawyer-Centric!
+                      Platformer
                   </div>
               </div>
               
