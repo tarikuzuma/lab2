@@ -91,7 +91,7 @@
         }
         ?>
 
-        <h2>PHP Form Validation Example</h2>
+        <h2>Guestbook</h2>
 
         <p><span class="error">* required field</span></p>
 
