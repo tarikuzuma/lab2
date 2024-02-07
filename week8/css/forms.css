@@ -85,9 +85,20 @@
 }
 
 /* Forms Style*/
-.comment_container form {
+.comment_form {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f2f2f2;
+    padding: 30px 15px 30px 15px;
+    border-radius: 30px;
+    width: 78%; /*1115 / 1920*/
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+
+form {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .comment_container .form-group {

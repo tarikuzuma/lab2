@@ -42,13 +42,13 @@
             <span class = "total_comments"> 2 </span>
         </div>
 
-        <div class="comment">
-            <div class="image_container">
-                <label for = "input-file"><img id="profile-image" src="https://picsum.photos/536/354" class="rounded_image"></label>
-                <input class = "hide" type = "file" accept = "image/jpeg, image/png, image/jpg" id = "input-file">
-            </div>
-            <div class="comment_container" style = "width: 100%; background-color: white;">
-                <form>
+        <div class="comment_form" style = "display: row;">
+            <form method="post" action="" enctype="multipart/form-data">
+                <div class="image_container">
+                    <label for = "input-file"><img id="profile-image" src="https://picsum.photos/536/354" class="rounded_image"></label>
+                    <input class="hide" type="file" accept="image/jpeg, image/png, image/jpg" name="input_file" id="input-file">
+                </div>
+                <div class="comment_container" style = "width: 100%; background-color: white;">
                     <div class="form-group">
                         <label for="username">Username:</label>
                         <input type="text" id="Username" name="user_name" required class="form-control">
@@ -57,23 +57,51 @@
                         <label for="phonenumber">Phone Number (Optional):</label>
                         <input type="text" id="mobileNumber" name="mobile_number" class="form-control">
                     </div>
-
                     <div class="form-group">
                         <label for="comment_text">Comment:</label>
                         <textarea id="Comment" name="comment" required class="form-control comment_box"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-            </div>
+                    <button type="submit" name = "comment_submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
         </div>
 
-        <div class="comment">
-            
+        <?php
+            $target_dir = "assets/comments_profiles/";
+            $uploadOk = 1;
+
+            if(isset($_POST["comment_submit"])) {
+                // Check if the file input is not empty
+                if(isset($_FILES["input_file"]) && $_FILES["input_file"]["size"] > 0) {
+                    $target_file = $target_dir . basename($_FILES["input_file"]["name"]);
+                    $check = getimagesize($_FILES["input_file"]["tmp_name"]);
+                    if($check !== false) {
+                        echo "File is an image - " . $check["mime"] . ".";
+                        $uploadOk = 1;
+                        // Move the uploaded file to the desired directory
+                        if (move_uploaded_file($_FILES["input_file"]["tmp_name"], $target_file)) {
+                            echo "The file ". basename( $_FILES["input_file"]["name"]). " has been uploaded.";
+                        } else {
+                            echo "Sorry, there was an error uploading your file.";
+                            $uploadOk = 0;
+                        }
+                    } else {
+                        echo "File is not an image.";
+                        $uploadOk = 0;
+                    }
+                } else {
+                    echo "No file uploaded.";
+                    $uploadOk = 0;
+                }
+                header("Location: test3.php");
+                exit();
+            }
+        ?>
+
+        <div class="comment"> 
             <div class="image_container">
                 <img src="https://picsum.photos/536/354" class = "rounded_image">
             </div>
-            
-
             <div class="comment_container">
                 <div class="username">
                     John Doe
@@ -130,7 +158,5 @@
             </div>
         </div>
     </div>
-
-
 
 </body>
