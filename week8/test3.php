@@ -8,6 +8,8 @@
 
     <script defer src = "js/forms_validator.js"></script>
     <script defer src = "js/app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 
     <!-- Connect to LastFM API -->
     <script type="text/javascript" src="js/last_fm/lastfm.api.cache.js"></script>
@@ -32,31 +34,37 @@
     <div class = "cursor-dot" data-cursor-dot></div>
     <div class = "cursor-outline" data-cursor-outline></div>
     <script src = "js/cursor.js"></script>
-    
-    <h2>Guest List!</h2>
-
-    <form method ="post">
-          <p>
-              <label for="firstName">Username:</label>
-              <input type="text" name="user_name" id="Username" required>
-          </p>
-          <p>
-              <label for="mobileNumber">Mobile Number (Optional):</label>
-              <input type="text" name="mobile_number" id="mobileNumber">
-          </p>
-          <p>
-              <label for="Comment">Comment:</label>
-              <textarea name="comment" id="Comment" rows="4" cols="50" required></textarea>
-          </p>
-          <input type="submit" value="Submit">
-          
-    </form>
-
-
+ 
     <div class="comments_section">
 
         <div class = "title_main">
-            Guest Comments!
+            <div>Guest Comments!</div>
+            <span class = "total_comments"> 2 </span>
+        </div>
+
+        <div class="comment">
+            <div class="image_container">
+                <label for = "input-file"><img id="profile-image" src="https://picsum.photos/536/354" class="rounded_image"></label>
+                <input class = "hide" type = "file" accept = "image/jpeg, image/png, image/jpg" id = "input-file">
+            </div>
+            <div class="comment_container" style = "width: 100%; background-color: white;">
+                <form>
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="Username" name="user_name" required class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="phonenumber">Phone Number (Optional):</label>
+                        <input type="text" id="mobileNumber" name="mobile_number" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comment_text">Comment:</label>
+                        <textarea id="Comment" name="comment" required class="form-control comment_box"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
         </div>
 
         <div class="comment">

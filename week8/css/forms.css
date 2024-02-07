@@ -12,20 +12,24 @@
     padding: 7% 3% 8% 3%;
     margin: 7% 7% 7% 7%;
 }
-  
+
+.total_comments {
+    text-align: right;
+}
+  /*
   @media screen and (max-width: 1024px) {
-    /* Adjust margin to take the whole width */
     .comments_section {
       margin: 0;
     }
   }
+  */
 
 .comment {
     display: flex;
     flex-direction: row;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: #f2f2f2;
-    padding: 30px 15px 20px 15px;
+    padding: 30px 15px 30px 15px;
     border-radius: 30px;
     width: 78%; /*1115 / 1920*/
     margin-top: 25px;
@@ -42,6 +46,10 @@
     height: 100px;
     border-radius: 50%;
     object-fit: cover; 
+}
+
+#profile-image {
+    cursor: pointer;
 }
 
 .comment_container {
@@ -74,4 +82,50 @@
 .comment_text .see-more-link,
 .comment_text .see-less-link {
     text-decoration: none;
+}
+
+/* Forms Style*/
+.comment_container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment_container .form-group {
+    margin-bottom: 15px;
+}
+
+.comment_container label {
+    font-weight: bold;
+}
+
+.comment_container .form-control {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.form-control.comment_box {
+    height: 200px;
+}
+
+.comment_container button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.comment_container button:hover {
+    background-color: #45a049;
+}
+
+.hide {
+    display: none;
 }
