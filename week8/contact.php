@@ -49,9 +49,11 @@
       </section>
 
       <div class="comments_section">
+
         <div class = "title_main">
-            <div>Guest Comments!</div>
+            <div>Guest Comments!
             <span class = "total_comments"> 2 </span>
+            </div>
         </div>
 
         <div class="comment_form" style = "display: row;">
@@ -78,13 +80,95 @@
             </form>
         </div>
 
-        <div class="comment">
-            
+        <?php
+            $target_dir = "assets/comments_profiles/";
+            $uploadOk = 1;
+
+            if(isset($_POST["comment_submit"])) {
+                // Check if the file input is not empty
+                if(isset($_FILES["input_file"]) && $_FILES["input_file"]["size"] > 0) {
+                    $target_file = $target_dir . basename($_FILES["input_file"]["name"]);
+                    $check = getimagesize($_FILES["input_file"]["tmp_name"]);
+                    if($check !== false) {
+                        echo "File is an image - " . $check["mime"] . ".";
+                        $uploadOk = 1;
+                        // Move the uploaded file to the desired directory
+                        if (move_uploaded_file($_FILES["input_file"]["tmp_name"], $target_file)) {
+                            echo "The file ". basename( $_FILES["input_file"]["name"]). " has been uploaded.";
+                        } else {
+                            echo "Sorry, there was an error uploading your file.";
+                            $uploadOk = 0;
+                        }
+                    } else {
+                        echo "File is not an image.";
+                        $uploadOk = 0;
+                    }
+                } else {
+                    echo "No file uploaded.";
+                    $uploadOk = 0;
+                }
+                
+                try {
+                    // PHP code to insert data to a database from the form
+
+                   /*
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "webprogss221";
+                    */
+                     
+                    $servername = "localhost";
+                    $username = "webprogss221";
+                    $password = "=latHen97";
+                    $dbname = "webprogss221";
+                    
+
+                    $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+                    // Check connection
+                    if ($conn->connect_error) {
+                        throw new Exception("Connection failed: " . $conn->connect_error);
+                    }
+
+                    // Taking all 5 values from the form data(input)
+                    $user_name = $_REQUEST['user_name'];
+                    $mobile_number = $_REQUEST['mobile_number'];
+                    $comment = $_REQUEST['comment'];
+
+                    // We are going to insert the data into our sampleDB table
+                    $sql = "INSERT INTO edgumba_myguest VALUES (NULL, '$user_name', '$mobile_number', '$comment', CURRENT_TIMESTAMP)";
+
+                    // Check if the query is successful
+                    if(mysqli_query($conn, $sql)){
+                        echo "<h3>data stored in a database successfully."
+                            . " Please browse your localhost php my admin"
+                            . " to view the updated data</h3>";
+
+                        echo nl2br("\n$user_name\n $mobile_number\n "
+                            . "$comment\n");
+                    } else {
+                        throw new Exception("Error: Hush! Sorry $sql. " . mysqli_error($conn));
+                    }
+                } catch (Exception $e) {
+                    echo "Error: " . $e->getMessage();
+                } finally {
+                    // Close connection
+                    $conn->close();
+                }
+
+                // Redirect after processing
+                header("Location: contact.php");
+                exit();
+                }
+             ?>
+
+        
+
+        <div class="comment"> 
             <div class="image_container">
                 <img src="https://picsum.photos/536/354" class = "rounded_image">
             </div>
-            
-
             <div class="comment_container">
                 <div class="username">
                     John Doe
@@ -140,7 +224,7 @@
                 </div>
             </div>
         </div>
-      </div>
+    </div>
 
 
 

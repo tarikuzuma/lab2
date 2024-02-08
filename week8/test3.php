@@ -38,8 +38,9 @@
     <div class="comments_section">
 
         <div class = "title_main">
-            <div>Guest Comments!</div>
+            <div>Guest Comments!
             <span class = "total_comments"> 2 </span>
+            </div>
         </div>
 
         <div class="comment_form" style = "display: row;">
@@ -97,17 +98,18 @@
                 try {
                     // PHP code to insert data to a database from the form
 
-                    /*
+                   
                     $servername = "localhost";
                     $username = "root";
                     $password = "";
                     $dbname = "webprogss221";
-                    */
-
+                    
+                     /*
                     $servername = "localhost";
                     $username = "webprogss221";
                     $password = "=latHen97";
                     $dbname = "webprogss221";
+                    */
 
                     $conn = mysqli_connect($servername, $username, $password, $dbname);
 
