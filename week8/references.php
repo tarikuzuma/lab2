@@ -27,6 +27,6 @@
 
     <p>PHP Tutorial: <a href="https://dev.to/anthonys1760/how-to-insert-form-data-into-a-database-using-html-php-2e8">Insert Form Data into Database Using HTML and PHP</a></p>
 
-
+    <p>PHP Upload: <a href =" https://www.w3schools.com/php/php_file_upload.asp">PHP File Upload</a></p>
 </body>
 </html>
