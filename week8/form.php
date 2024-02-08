@@ -121,7 +121,7 @@
           // PHP code to insert data to a database from the form
 
           $servername = "localhost";
-          $username = "webprogss221 ";
+          $username = "webprogss221";
           $password = "=latHen97";
           $dbname = "webprogss221";
 
@@ -166,7 +166,7 @@
       <?php
         try {
             $servername = "localhost";
-            $username = "webprogss221 ";
+            $username = "webprogss221";
             $password = "=latHen97";
             $dbname = "webprogss221";
 
