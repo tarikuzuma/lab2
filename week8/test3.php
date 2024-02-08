@@ -65,6 +65,7 @@
                 </div>
             </form>
         </div>
+
         <?php
             $target_dir = "assets/comments_profiles/";
             $uploadOk = 1;
@@ -96,9 +97,16 @@
                 try {
                     // PHP code to insert data to a database from the form
 
+                    /*
                     $servername = "localhost";
                     $username = "root";
                     $password = "";
+                    $dbname = "webprogss221";
+                    */
+
+                    $servername = "localhost";
+                    $username = "webprogss221";
+                    $password = "=latHen97";
                     $dbname = "webprogss221";
 
                     $conn = mysqli_connect($servername, $username, $password, $dbname);
