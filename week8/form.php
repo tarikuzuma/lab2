@@ -121,8 +121,8 @@
           // PHP code to insert data to a database from the form
 
           $servername = "localhost";
-          $username = "root";
-          $password = "";
+          $username = "webprogss221 ";
+          $password = "=latHen97";
           $dbname = "webprogss221";
 
           $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -166,8 +166,8 @@
       <?php
         try {
             $servername = "localhost";
-            $username = "root";
-            $password = "";
+            $username = "webprogss221 ";
+            $password = "=latHen97";
             $dbname = "webprogss221";
 
             // Create connection
