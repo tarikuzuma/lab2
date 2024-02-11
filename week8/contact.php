@@ -258,6 +258,7 @@
                 </div>
             </div>
         </div>
+        -->
 
         <div class="comment">
             <div class="image_container">
@@ -287,7 +288,7 @@
                 consequuntur!
                 </div>
             </div>
-        </div> -->
+        </div> 
     
         <div class = "title_main" style = "margin-top: 30px;">
             - End of Comments -        
