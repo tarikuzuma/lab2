@@ -150,67 +150,66 @@
                 }
              ?>
 
-        
+        <?php
+            try {
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $dbname = "webprogss221";
 
-        <div class="comment"> 
-            <div class="image_container">
-                <img src="https://picsum.photos/536/354" class = "rounded_image">
-            </div>
-            <div class="comment_container">
-                <div class="username">
-                    John Doe
-                </div>
-                <div class="time_posted">
-                    February 2, 2024
-                </div>
-                <div class="comment_text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-                molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-                numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-                optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
-                obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
-                nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
-                tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
-                quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos 
-                sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam
-                recusandae alias error harum maxime adipisci amet laborum. Perspiciatis 
-                minima nesciunt dolorem! Officiis iure rerum voluptates a cumque velit 
-                quibusdam sed amet tempora. Sit laborum ab, eius fugit doloribus tenetur 
-                fugiat, temporibus enim commodi iusto libero magni deleniti quod quam 
-                consequuntur!
-                </div>
-            </div>
-        </div>
+                 /*
+                $servername = "localhost";
+                $username = "webprogss221";
+                $password = "=latHen97";
+                $dbname = "webprogss221";
+                */
 
-        <div class="comment">
-            <div class="image_container">
-                <img src="https://picsum.photos/536/354" class = "rounded_image">
-            </div>
-            <div class="comment_container">
-                <div class="username">
-                    John Doe
-                </div>
-                <div class="time_posted">
-                    February 2, 2024
-                </div>
-                <div class="comment_text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-                molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-                numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-                optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
-                obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
-                nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
-                tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
-                quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos 
-                sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam
-                recusandae alias error harum maxime adipisci amet laborum. Perspiciatis 
-                minima nesciunt dolorem! Officiis iure rerum voluptates a cumque velit 
-                quibusdam sed amet tempora. Sit laborum ab, eius fugit doloribus tenetur 
-                fugiat, temporibus enim commodi iusto libero magni deleniti quod quam 
-                consequuntur!
-                </div>
-            </div>
-        </div>
-    </div>
+                // Create connection
+                $conn = new mysqli($servername, $username, $password, $dbname);
+
+                // Check connection
+                if ($conn->connect_error) {
+                    throw new Exception("Connection failed: " . $conn->connect_error);
+                }
+
+                // SQL Query to Get Comment Details
+                $commentDetailsSql = "SELECT * FROM edgumba_myguest  ORDER BY date_posted DESC";
+                $commentDetailsResult = $conn->query($commentDetailsSql);
+
+                // Check if there are results
+                if ($commentDetailsResult->num_rows > 0) {
+                    // Loop through each comment
+                    while ($row = $commentDetailsResult->fetch_assoc()) {
+            ?>
+                        <div class="comment"> 
+                            <div class="image_container">
+                                <img src="https://picsum.photos/536/354" class="rounded_image">
+                            </div>
+                            <div class="comment_container">
+                                <div class="username">
+                                    <?php echo $row["user_name"]; ?>
+                                </div>
+                                <div class="time_posted">
+                                    <?php echo $row["date_posted"]; ?>
+                                </div>
+                                <div class="comment_text">
+                                    <?php echo $row["comment"]; ?>
+                                </div>
+                            </div>
+                        </div>
+        <?php
+                    }
+                } else {
+                    echo "0 results for comment details or you didnt make a table did ya?!";
+                }
+            } catch (Exception $e) {
+                echo "Error: " . $e->getMessage();
+            } finally {
+                // Close the database connection
+                if (isset($conn)) {
+                    $conn->close();
+                }
+            }
+        ?>
 
 </body>
