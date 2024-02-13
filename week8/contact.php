@@ -111,18 +111,18 @@
                 try {
                     // PHP code to insert data to a database from the form
 
-                   /*
+                   
                     $servername = "localhost";
                     $username = "root";
                     $password = "";
                     $dbname = "webprogss221";
-                    */
+                    
                      
                     
-                    $servername = "localhost";
-                    $username = "webprogss221";
-                    $password = "=latHen97";
-                    $dbname = "webprogss221";
+                    // $servername = "localhost";
+                    // $username = "webprogss221";
+                    // $password = "=latHen97";
+                    // $dbname = "webprogss221";
                     
                     
 
@@ -167,16 +167,16 @@
 
           <?php
             try {
-                // $servername = "localhost";
-                // $username = "root";
-                // $password = "";
-                // $dbname = "webprogss221";
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $dbname = "webprogss221";
 
                  
-                $servername = "localhost";
-                $username = "webprogss221";
-                $password = "=latHen97";
-                $dbname = "webprogss221";
+                // $servername = "localhost";
+                // $username = "webprogss221";
+                // $password = "=latHen97";
+                // $dbname = "webprogss221";
                 
 
                 // Create connection
