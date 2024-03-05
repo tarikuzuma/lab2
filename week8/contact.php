@@ -132,7 +132,7 @@
             
             // Access the total_comments value from the array
             $total_comments = $row['total_comments'];
-            
+            $total_comments++; // Increment + 1 to the total comments since John Doe place holder.
             // Output the total number of comments
             echo "<div class='title_main'>
                     <div>Guest Comments!
@@ -207,7 +207,7 @@
                   if($check !== false) {
                       $uploadOk = 0;
                       if (move_uploaded_file($_FILES["input_file"]["tmp_name"], $target_file)) {
-                        $new_target_file = $target_dir . "keemstar";
+                        $new_target_file = $target_dir . ($total_comments+1). ".png";
                         rename($target_file, $new_target_file);
                         echo "The file ". basename( $_FILES["input_file"]["name"]). " has been uploaded and renamed.";
                       } else {
@@ -274,12 +274,10 @@
                 $password = "";
                 $dbname = "webprogss221";
 
-                 
                 // $servername = "localhost";
                 // $username = "webprogss221";
                 // $password = "=latHen97";
                 // $dbname = "webprogss221";
-                
 
                 // Create connection
                 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -297,10 +295,21 @@
                 if ($commentDetailsResult->num_rows > 0) {
                     // Loop through each comment
                     while ($row = $commentDetailsResult->fetch_assoc()) {
-          ?>
+                        $user_id = $row["user_id"];
+            ?>
                         <div class="comment"> 
                             <div class="image_container">
-                                <img src="https://picsum.photos/536/354" class="rounded_image">
+                                <?php
+                                // Construct the image path based on user ID
+                                $image_path = "assets/comments_profiles/{$user_id}.png";
+                                // Check if the image file exists
+                                if (file_exists($image_path)) {
+                                    echo "<img src=\"$image_path\" class=\"rounded_image\">";
+                                } else {
+                                    // If no image is found, display a default image
+                                    echo "<img src=\"https://picsum.photos/536/354\" class=\"rounded_image\">";
+                                }
+                                ?>
                             </div>
                             <div class="comment_container">
                                 <div class="username">
@@ -314,7 +323,7 @@
                                 </div>
                             </div>
                         </div>
-        <?php
+            <?php
                     }
                 } else {
                     echo "0 results for comment details or you didnt make a table did ya?!";
@@ -327,7 +336,8 @@
                     $conn->close();
                 }
             }
-        ?>
+            ?>
+
 
         <div class="comment">
             <div class="image_container">
