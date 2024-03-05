@@ -119,7 +119,7 @@
     <?php
       try {
           // PHP code to insert data to a database from the form
-
+          
           $servername = "localhost";
           $username = "webprogss221";
           $password = "=latHen97";
